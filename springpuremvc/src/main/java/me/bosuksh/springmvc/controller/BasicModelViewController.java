@@ -1,4 +1,4 @@
-package me.bosuksh.springmvc;
+package me.bosuksh.springmvc.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

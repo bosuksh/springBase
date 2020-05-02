@@ -1,6 +1,7 @@
-package me.bosuksh.springmvc;
+package me.bosuksh.springmvc.controller;
 
 
+import me.bosuksh.springmvc.controller.BasicModelMapController;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.http.MediaType;
@@ -14,16 +15,15 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
-public class BasicModelViewControllerTest {
+public class BasicModelMapControllerTest {
 
     private MockMvc mockMvc;
 
     @Before
     public void setUp() {
-        mockMvc = MockMvcBuilders.standaloneSetup(
-                new BasicModelViewController())
-                .setViewResolvers(viewResolver())
-                .build();
+        this.mockMvc = MockMvcBuilders.standaloneSetup(
+                new BasicModelMapController()
+        ).setViewResolvers(viewResolver()).build();
     }
 
     private ViewResolver viewResolver() {
@@ -35,11 +35,11 @@ public class BasicModelViewControllerTest {
     }
 
     @Test
-    public void testWelcomeModelAndView() throws Exception {
+    public void testModelMap() throws Exception {
         mockMvc.perform(
-                get("/welcome-model-and-view")
+                get("/welcome-model-map")
                 .accept(MediaType.parseMediaType("application/html;charset=UTF-8")))
-                .andExpect(view().name("welcome-model-and-view"))
-                .andExpect(model().attribute("name","abc"));
+                .andExpect(model().attribute("name","xyz"))
+                .andExpect(view().name("welcome-model-map"));
     }
 }
