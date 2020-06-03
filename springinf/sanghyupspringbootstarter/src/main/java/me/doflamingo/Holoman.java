@@ -1,6 +1,4 @@
-package me.bosuksh;
-
-import org.springframework.context.annotation.Configuration;
+package me.doflamingo;
 
 public class Holoman {
 
