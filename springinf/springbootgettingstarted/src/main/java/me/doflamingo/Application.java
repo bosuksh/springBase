@@ -1,4 +1,4 @@
-package me.bosuksh;
+package me.doflamingo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

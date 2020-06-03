@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>me.bosuksh</groupId>
+    <groupId>me.doflamingo</groupId>
     <artifactId>spring-boot-getting-started</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -24,8 +24,8 @@
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
         <dependency>
-            <groupId>me.bosuksh</groupId>
-            <artifactId>sanghyup-spring-boot-starter</artifactId>
+            <groupId>me.doflamingo</groupId>
+            <artifactId>doflamingo-spring-boot-starter</artifactId>
             <version>1.0.2</version>
         </dependency>
     </dependencies>
