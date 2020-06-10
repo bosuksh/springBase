@@ -1,8 +1,6 @@
-package me.doflamingo.springboothateoas;
+package me.doflamingo.springbootcorsserver;
 
-import org.springframework.hateoas.RepresentationModel;
-
-public class Hello extends RepresentationModel<Hello> {
+public class Hello {
 
     private String prefix;
 
