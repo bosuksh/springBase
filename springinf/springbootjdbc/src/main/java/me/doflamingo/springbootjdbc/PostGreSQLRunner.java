@@ -12,7 +12,7 @@ import java.sql.Connection;
 import java.sql.Statement;
 
 @Component
-public class MySqlRunner implements ApplicationRunner {
+public class PostGreSQLRunner implements ApplicationRunner {
 
     @Autowired
     DataSource dataSource;
@@ -24,14 +24,15 @@ public class MySqlRunner implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         try(Connection connection = dataSource.getConnection()) {
             System.out.println(dataSource.getClass());
+            System.out.println(connection.getMetaData().getDriverName());
             System.out.println(connection.getMetaData().getURL());
             System.out.println(connection.getMetaData().getUserName());
 
             Statement statement = connection.createStatement();
-            String sql = "CREATE TABLE USER(ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (id))";
+            String sql = "CREATE TABLE account(ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (id))";
             statement.execute(sql);
         }
 
-        jdbcTemplate.execute("INSERT INTO USER VALUES (1,'Doflamingo')");
+        jdbcTemplate.execute("INSERT INTO account VALUES (1,'Doflamingo')");
     }
 }
