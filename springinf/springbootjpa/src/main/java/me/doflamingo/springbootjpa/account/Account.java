@@ -15,6 +15,16 @@ public class Account {
 
     private String password;
 
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    private boolean active;
+
     public Long getId() {
         return id;
     }
